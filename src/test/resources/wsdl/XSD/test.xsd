@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8'?>
+	<!--
+		Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is
+		JAX-WS RI 2.2.1-b01-.
+	-->
+<xs:schema xmlns:tns="http://services.test.bansheeproject.com/"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0"
+	targetNamespace="http://services.test.bansheeproject.com/">
+
+	<xs:element name="AnotherBusinessException" type="tns:AnotherBusinessException" />
+
+	<xs:element name="BusinessException" nillable="true"
+		type="tns:businessExceptionBean" />
+
+	<xs:element name="arg0" nillable="true" type="xs:string" />
+
+	<xs:element name="complexOperation" nillable="true"
+		type="tns:complexOperation" />
+
+	<xs:element name="complexOperationResponse" nillable="true"
+		type="tns:complexOperationResponse" />
+
+	<xs:element name="handleHeaders" type="tns:handleHeaders" />
+
+	<xs:element name="handleHeadersResponse" type="tns:handleHeadersResponse" />
+
+	<xs:element name="hangOperation" nillable="true"
+		type="tns:hangOperation" />
+
+	<xs:element name="hangOperationResponse" nillable="true"
+		type="tns:hangOperationResponse" />
+
+	<xs:element name="hangThenThrowException" type="tns:hangThenThrowException" />
+
+	<xs:element name="hangThenThrowExceptionResponse" type="tns:hangThenThrowExceptionResponse" />
+
+	<xs:element name="oneWayOperation" nillable="true"
+		type="tns:oneWayOperation" />
+
+	<xs:element name="oneWayOperationResponse" nillable="true"
+		type="tns:oneWayOperationResponse" />
+
+	<xs:element name="stringOperation" nillable="true"
+		type="tns:stringOperation" />
+
+	<xs:element name="stringOperationResponse" nillable="true"
+		type="tns:stringOperationResponse" />
+
+	<xs:element name="throwBusinessException" nillable="true"
+		type="tns:throwBusinessException" />
+
+	<xs:element name="throwBusinessExceptionResponse" nillable="true"
+		type="tns:throwBusinessExceptionResponse" />
+
+	<xs:element name="throwRandomException" type="tns:throwRandomException" />
+
+	<xs:element name="throwRandomExceptionResponse" type="tns:throwRandomExceptionResponse" />
+
+	<xs:complexType name="throwRandomException">
+		<xs:sequence />
+	</xs:complexType>
+
+	<xs:complexType name="throwRandomExceptionResponse">
+		<xs:sequence />
+	</xs:complexType>
+
+	<xs:complexType name="businessExceptionBean">
+		<xs:sequence>
+			<xs:element name="message" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="AnotherBusinessException">
+		<xs:sequence>
+			<xs:element name="message" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="hangOperation">
+		<xs:sequence />
+	</xs:complexType>
+
+	<xs:complexType name="hangOperationResponse">
+		<xs:sequence />
+	</xs:complexType>
+
+	<xs:complexType name="stringOperation">
+		<xs:sequence>
+			<xs:element name="arg0" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="stringOperationResponse">
+		<xs:sequence>
+			<xs:element name="return" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="hangThenThrowException">
+		<xs:sequence />
+	</xs:complexType>
+
+	<xs:complexType name="hangThenThrowExceptionResponse">
+		<xs:sequence />
+	</xs:complexType>
+
+	<xs:complexType name="handleHeaders">
+		<xs:sequence />
+	</xs:complexType>
+
+	<xs:complexType name="handleHeadersResponse">
+		<xs:sequence>
+			<xs:element name="return" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="throwBusinessException">
+		<xs:sequence />
+	</xs:complexType>
+
+	<xs:complexType name="throwBusinessExceptionResponse">
+		<xs:sequence>
+			<xs:element name="return" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="complexOperation">
+		<xs:sequence>
+			<xs:element name="arg0" type="tns:complexType" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="complexType">
+		<xs:sequence>
+			<xs:element name="array" type="xs:int" nillable="true"
+				minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="string" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="complexOperationResponse">
+		<xs:sequence>
+			<xs:element name="return" type="tns:complexType"
+				minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="oneWayOperation">
+		<xs:sequence>
+			<xs:element name="arg0" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="oneWayOperationResponse">
+		<xs:sequence />
+	</xs:complexType>
+</xs:schema>

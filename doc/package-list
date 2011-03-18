@@ -1,0 +1,12 @@
+com.bansheeproject
+com.bansheeproject.engine
+com.bansheeproject.engine.converters
+com.bansheeproject.engine.soap
+com.bansheeproject.engine.wsdl
+com.bansheeproject.exceptions
+com.bansheeproject.features
+com.bansheeproject.features.security
+com.bansheeproject.log
+com.bansheeproject.test
+com.bansheeproject.test.entities
+com.bansheeproject.utils
